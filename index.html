@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>webpack+vue</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      /* Promise hack */
+      if (!window.Promise) {
+        let bluebird = document.createElement('script');
+        bluebird.async = true;
+        bluebird.src =
+          'https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js';
+        let s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(bluebird, s);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 项目内部的vue引用可以通过cdn的方式全局引用 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <div id="app"></div>
+  </body>
+</html>
