@@ -5,11 +5,14 @@
       alt="icon">
     <router-link :to="{path:'/401'}">去报错页面</router-link>
     <button>这是一个展示按钮</button>
+    <Tesseract></Tesseract>
   </div>
 </template>
 <script>
+import { Tesseract } from "@/components";
 export default {
-  name: 'login'
+  name: "login",
+  components: { Tesseract }
 };
 </script>
 <style>
